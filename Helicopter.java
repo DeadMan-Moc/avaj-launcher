@@ -1,6 +1,6 @@
 package sources.deadman;
 
-public class Helicopter extends Aircraft {
+public class Helicopter extends Aircraft implements Flyable {
 
     WeatherTower weatherTower;
 

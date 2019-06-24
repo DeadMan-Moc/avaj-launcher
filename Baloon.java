@@ -1,6 +1,6 @@
 package sources.deadman;
 
-public class Baloon extends Aircraft {
+public class Baloon extends Aircraft implements Flyable {
 
     public WeatherTower weatherTower;
 
