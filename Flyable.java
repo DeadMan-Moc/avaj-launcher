@@ -1,12 +1,6 @@
 package sources.deadman;
 
 public class Flyable  {
-
-    public void updateConditions() {
-
-    }
-
-    public void registerTower(WeatherTower WeatherTower){
-
-    }
+    public void updateConditions();
+    public void registerTower(WeatherTower WeatherTower);
 }

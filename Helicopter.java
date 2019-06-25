@@ -1,10 +1,13 @@
 package sources.deadman;
 
+private int name;
 public class Helicopter extends Aircraft implements Flyable {
 
     WeatherTower weatherTower;
 
     Helicopter(String name, Coordinates coordinates) {
+
+        this.name = name;
 
     }
 

@@ -21,6 +21,9 @@ classes -> objects
  Are they flyable?
         ||
         \/
+graphical conditions
+        ||
+        \/
 if yes -> conditions
         ||
         \/
@@ -28,5 +31,11 @@ apply weather conditions
 
 #real documentation
 
-Classes :
+#Classes :
+
+aircraft -> 
+
+baloon -> 
+
+
 

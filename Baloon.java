@@ -5,14 +5,12 @@ public class Baloon extends Aircraft implements Flyable {
     public WeatherTower weatherTower;
 
     Baloon(Coordinates coordinates) {
-        return();
+        super(name, coordinates);
     }
 
-    public void updateConditions() {
-        return();
-    }
+    public void updateConditions();
 
     public void registerTower(WeatherTower weatherTower) {
-        return();
+        
     }
 }
