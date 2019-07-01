@@ -8,7 +8,14 @@ public class AicraftFactory
         coordinates place = new ();
         if (type != null)
         {
+            switch (key) {
+                case value:
+                    
+                    break;
             
+                default:
+                    break;
+            }
         }
     }
 }

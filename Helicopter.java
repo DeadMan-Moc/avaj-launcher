@@ -8,6 +8,7 @@ public class Helicopter extends Aircraft implements Flyable {
     Helicopter(String name, Coordinates coordinates) {
 
         this.name = name;
+        this.coordinates = coordinates;
 
     }
 
@@ -16,7 +17,7 @@ public class Helicopter extends Aircraft implements Flyable {
     }
 
     public void registerTower(WeatherTower weatherTower) {
-
+        this.weatherTower = weatherTower;
     }
 
 }
