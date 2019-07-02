@@ -4,9 +4,7 @@ public class WeatherProvider {
     private static WeatherProvider weatherProvider;
     private static String[] weather = {"SUN", "RAIN", "FOG", "SNOW"};
 
-    private WeatherProvider(){
-        /*;;;*/
-    }
+    private WeatherProvider(){}
 
     public static WeatherProvider getProvider() {
         if (weatherProvider == null) {
@@ -16,6 +14,9 @@ public class WeatherProvider {
     }
 
     public String getCurrentWeather(Coordinates coordinates) {
-        /* .. */
+        Random rand = new Random();
+        int rand_int = 0;
+        rand_int = rand.nextInt(4);
+        return (weather[rand_int]);
     }
 }
