@@ -4,17 +4,18 @@ public class AicraftFactory
 {
     public Flyable newAicraft(String type, String name, int longitude, int latitude, int height)
     {
-        Flyable newAicraft  = null;
-        coordinates place = new ();
-        if (type != null)
-        {
-            switch (key) {
-                case value:
-                    
-                    break;
-            
-                default:
-                    break;
+        Coordinates coordinates = new coordinates(latitude, longitude, height);
+        if (type != null) {
+            if (type.equals("baloon")) {
+                return new Baloon(name, coordinates);
+            }
+            else if (type.equals("jetplane")) {
+                return new JetPlane(name, coordinates);
+            }
+            else if (type.equals("helicopter")) {
+                return new Helicopter(name, coordinates);
+            } else {
+                return null;
             }
         }
     }
