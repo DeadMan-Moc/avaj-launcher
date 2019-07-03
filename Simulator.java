@@ -14,6 +14,7 @@ public class Simulator {
             if (line != null) {
                 weatherTower = new WeatherTower();
                 int simulations = Integer.parseInt(line.split(" ")[0]);
+
             }
         }
     }
