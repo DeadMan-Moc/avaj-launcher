@@ -1,4 +1,6 @@
-package sources.deadman;
+package All;
+
+import java.util.Random;
 
 public class WeatherProvider {
     private static WeatherProvider weatherProvider;

@@ -1,4 +1,4 @@
-package sources.deadman;
+package All;
 
 public class WeatherTower extends Tower {
     public String getWeather(Coordinates coordinates) {

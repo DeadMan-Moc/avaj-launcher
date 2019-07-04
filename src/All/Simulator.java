@@ -1,16 +1,16 @@
-package sources.deadman;
+package All;
 
 import java.util.*;
-import java.io;
 import java.io.*;
+
 
 public class Simulator {
     private static  WeatherTower weatherTower;
     private static List<Flyable> flyables = new ArrayList<>();
-    public static void main(String[] args) throws InterreptedException {
+    public static void main(String[] args) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(args[0]));
-            String line = reader.readline();
+            String line = reader.readLine();
             if (line != null) {
                 weatherTower = new WeatherTower();
                 int simulations = Integer.parseInt(line.split(" ")[0]);
@@ -18,8 +18,8 @@ public class Simulator {
                     System.out.println("Invalid counting" + simulations);
                     System.exit(1);
                 }
-                while((line = reader.readline()) != null) {
-                    Flyable flyable = Aircraftfactory.newAircraft(line.split(" ")[0], line.split(" ")[1],
+                while ((line = reader.readLine()) != null) {
+                    Flyable flyable = AircraftFactory.newAircraft(line.split(" ")[0], line.split(" ")[1],
                             Integer.parseInt(line.split(" ")[2]), Integer.parseInt(line.split(" ")[3]),
                             Integer.parseInt(line.split(" ")[4]));
                     flyables.add(flyable);
@@ -31,7 +31,8 @@ public class Simulator {
                     weatherTower.changeWeather();
                 }
             }
-            catch (FileNotException e) {
+        }
+            catch (FileNotFoundException e) {
                 System.out.println("No file found" + args[0]);
             }
             catch (IOException e) {
@@ -40,9 +41,6 @@ public class Simulator {
             catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("What's your simulation file?");
             }
-            finally {
-                Logger.getLogger().close();
-            }
-        }s
+
+        }
     }
-}

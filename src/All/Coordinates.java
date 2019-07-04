@@ -1,4 +1,4 @@
-package sources.deadman;
+package All;
 
 public class Coordinates {
     private int longitude;
