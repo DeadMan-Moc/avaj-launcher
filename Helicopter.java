@@ -30,18 +30,17 @@ public class Helicopter extends Aircraft implements Flyable {
 				this.coordinates.setHeight(this.coordinates.getHeight() - 1);
 				Simulator.writer.println("Helicopter#" + this.name + "(" + this.id + "): I CAN'T SEE!!!");
 				break;
-			case "SNOW":
-				this.coordinates.setHeight(this.coordinates.getHeight() - 7);
-				Simulator.writer.println("Helicopter#" + this.name + "(" + this.id + "): IM STARTING TO FREEZE UP HERE!");
-				Simulator.writer.println("Tower  says: Baloon#" + this.name + "(" + this.id + ")" + " unregistered from weather tower.");
-				break;
+				case "SNOW":
+				this.coordinates.setHeight(this.coordinates.getHeight() - 12);
+				Simulator.writer.println("Helicopter#" + this.name + "(" + this.id + "): OH GOD ITS FREEZING UP HERE");
+			break;
 			default:
-				Simulator.writer.println("Baloon#" + this.name + "(" + this.id + "): I CANT CONTACT THE WEATHER TOWER");
-				break;
+			Simulator.writer.println("Helicopter#" + this.name + "(" + this.id + "): THE WEATHERTOWER ISN'T RESPONDING");
+			break;
 		}
-
-		public void registerTower(WeatherTower weatherTower) {
-			this.weatherTower = weatherTower;
+		if (this.coordinates.getHeight() <= 0) {
+			Simulator.writer.println("Helicopter#" + this.name + "(" + this.id + ") landing.");
+			Simulator.writer.println("Tower  says: Helicopter#" + this.name + "(" + this.id + ")" + " unregistered from weather tower.");
 		}
-
 	}
+		

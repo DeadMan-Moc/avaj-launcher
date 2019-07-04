@@ -22,13 +22,26 @@ public class JetPlane extends Aircraft implements Flyable {
 				this.coordinates.setHeight(this.coordinates.getHeight() + 1);
 				Simulator.writer.println("Helicopter#" + this.name + "(" + this.id + "): I CAN'T SEE!!!");
 				break;
-			case "SNOW":
-				this.coordinates.setHeight(this.coordinates.getHeight() + 7);
-				Simulator.writer.println("Helicopter#" + this.name + "(" + this.id + "): IM STARTING TO FREEZE UP HERE!");
-				Simulator.writer.println("Tower  says: Baloon#" + this.name + "(" + this.id + ")" + " unregistered from weather tower.");
+				case "SNOW":
+				this.coordinates.setHeight(this.coordinates.getHeight() - 12);
+				Simulator.writer.println("JetPlane#" + this.name + "(" + this.id + "): THE SNOW IS FREEZING MY WINDOWS THEY ARE GOING TO CRACK");
 				break;
 			default:
-				Simulator.writer.println("Baloon#" + this.name + "(" + this.id + "): I CANT CONTACT THE WEATHER TOWER");
-				break;
+			Simulator.writer.println("JetPlane#" + this.name + "(" + this.id + "): ALL HOPE IS LOST I CAN't COUNTACT THE WEATHER TOWER");
+			break;
+		}
+		if (this.coordinates.getHeight() <= 0) {
+			Simulator.writer.println("JetPlane#" + this.name + "(" + this.id + ") landing.");
+			Simulator.writer.println("Tower  says: JetPlane#" + this.name + "(" + this.id + ")" + " unregistered from weather tower.");
+		}
+	}
+
+	public	void	registerTower(WeatherTower weatherTower) {
+		this.weatherTower = weatherTower;
+		Simulator.writer.println("Tower says: JetPlane#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
+		this.weatherTower.register(this);
+	}
+
+}
 		}
 	}
