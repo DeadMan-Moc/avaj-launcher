@@ -19,10 +19,30 @@ public class Simulator {
                     System.exit(1);
                 }
                 while((line = reader.readline()) != null) {
-                    Flyable flyable = Aircraftfactory.newAircraft(ArrayList[0]);
-                    
+                    Flyable flyable = Aircraftfactory.newAircraft(line.split(" ")[0], line.split(" ")[1],
+                            Integer.parseInt(line.split(" ")[2]), Integer.parseInt(line.split(" ")[3]),
+                            Integer.parseInt(line.split(" ")[4]));
+                    flyables.add(flyable);
+                }
+                for (Flyable flyable : flyables) {
+                    flyable.registerTower(weatherTower);
+                }
+                for (int i = 1; i <= simulations; i++) {
+                    weatherTower.changeWeather();
                 }
             }
-        }
+            catch (FileNotException e) {
+                System.out.println("No file found" + args[0]);
+            }
+            catch (IOException e) {
+                System.out.println("Errror in reading the file" + args[0]);
+            }
+            catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("What's your simulation file?");
+            }
+            finally {
+                Logger.getLogger().close();
+            }
+        }s
     }
 }
