@@ -2,7 +2,7 @@ package sources.deadman;
 
 public class WeatherTower extends Tower {
     public String getWeather(Coordinates coordinates) {
-        return(getWeather().)
+        return(getWeather().getCurrentWeather(coordinates));
     }
 
     void changeWeather(){
