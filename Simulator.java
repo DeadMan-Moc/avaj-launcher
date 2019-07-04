@@ -14,7 +14,14 @@ public class Simulator {
             if (line != null) {
                 weatherTower = new WeatherTower();
                 int simulations = Integer.parseInt(line.split(" ")[0]);
-
+                if (simulations < 0) {
+                    System.out.println("Invalid counting" + simulations);
+                    System.exit(1);
+                }
+                while((line = reader.readline()) != null) {
+                    Flyable flyable = Aircraftfactory.newAircraft(ArrayList[0]);
+                    
+                }
             }
         }
     }
