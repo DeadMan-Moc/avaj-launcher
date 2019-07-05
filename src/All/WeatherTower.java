@@ -2,10 +2,10 @@ package All;
 
 public class WeatherTower extends Tower {
     public String getWeather(Coordinates coordinates) {
-        return(getWeather().getCurrentWeather(coordinates));
+        return(WeatherProvider.getProvider().getCurrentWeather(coordinates));
     }
 
     void changeWeather(){
-        this.conditionsChanged;
+        this.condtionsChanged();
     }
 }

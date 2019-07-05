@@ -11,8 +11,8 @@ public class JetPlane extends Aircraft implements Flyable {
 		String weather = this.weatherTower.getWeather(this.coordinates);
 		switch (weather) {
 			case "SUN":
-				this.coordinates.setLongitude(this.coordinates.getLongitude() + 10);
-				this.coordinates.setHeight(this.coordinates.getHeight() + 2);
+//				this.coordinates.setLongitude(this.coordinates.getLongitude() + 10);
+//				this.coordinates.setHeight(this.coordinates.getHeight() + 2);
 				if (this.coordinates.getHeight() > 100)
 					this.coordinates.setLongitude(100);
 				//Simulator.writer.println("All.Helicopter#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
@@ -28,10 +28,10 @@ public class JetPlane extends Aircraft implements Flyable {
 				//Simulator.writer.println("All.Helicopter#" + this.name + "(" + this.id + "): I CAN'T SEE!!!");
 				System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
 				break;
-				case "SNOW":
+			case "SNOW":
 				this.coordinates.setHeight(this.coordinates.getHeight() - 12);
 				//Simulator.writer.println("All.JetPlane#" + this.name + "(" + this.id + "): THE SNOW IS FREEZING MY WINDOWS THEY ARE GOING TO CRACK");
-					System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
+				System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
 				break;
 			default:
 			//Simulator.writer.println("All.JetPlane#" + this.name + "(" + this.id + "): ALL HOPE IS LOST I CAN't COUNTACT THE WEATHER TOWER");

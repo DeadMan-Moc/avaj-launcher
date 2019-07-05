@@ -1,6 +1,7 @@
 package All;
 
 public interface Flyable  {
+    public Coordinates getCoordinates();
     public void updateConditions();
-    public void registerTower(WeatherTower WeatherTower);
+    public void registerTower(WeatherTower weatherTower);
 }

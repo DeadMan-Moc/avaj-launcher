@@ -14,13 +14,12 @@ public abstract class Aircraft {
         this.id = idCounter;
         idCounter = ++idCounter;
     }
-    private long nextId;
-    
-    public long getId() {
-        return (this.id);
+    private long nextId(){
+        id = ++idCounter;
+        return (id);
     }
 
-    public String getName() {
-        return (this.name);
+    public Coordinates getCoordinates() {
+        return this.coordinates;
     }
 }

@@ -12,26 +12,29 @@ public class Helicopter extends Aircraft implements Flyable {
         String weather = this.weatherTower.getWeather(this.coordinates);
         switch (weather) {
             case "SUN":
-                this.coordinates.setLongitude(this.coordinates.getLongitude() + 10);
-                this.coordinates.setHeight(this.coordinates.getHeight() + 2);
+//                this.coordinates.setLongitude(this.coordinates.getLongitude() + 10);
+//                this.coordinates.setHeight(this.coordinates.getHeight() + 2);
                 if (this.coordinates.getHeight() > 100)
                     this.coordinates.setLongitude(100);
                 //Simulator.writer.println("All.Helicopter#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
                 System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
                 break;
             case "RAIN":
-                this.coordinates.setHeight(this.coordinates.getHeight() - 5);
+               // this.coordinates.setHeight(this.coordinates.getHeight() - 5);
+                this.coordinates =new Coordinates(coordinates.getLongitude() + 10, coordinates.getLatitude() + 2, coordinates.getHeight() - 5);
                 //Simulator.writer.println("All.Helicopter#" + this.name + "(" + this.id + "): I WISH THIS BALLON WASN'T OPEN");
                 System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
                 break;
             case "FOG":
-                this.coordinates.setHeight(this.coordinates.getHeight() - 1);
+               // this.coordinates.setHeight(this.coordinates.getHeight() - 1);
                 //Simulator.writer.println("All.Helicopter#" + this.name + "(" + this.id + "): I CAN'T SEE!!!");
+                this.coordinates = new Coordinates(coordinates.getLongitude() + 10, coordinates.getLatitude() + 2, coordinates.getHeight() - 1);
                 System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
                 break;
             case "SNOW":
-                this.coordinates.setHeight(this.coordinates.getHeight() - 12);
+                //this.coordinates.setHeight(this.coordinates.getHeight() - 12);
                 //Simulator.writer.println("All.Helicopter#" + this.name + "(" + this.id + "): OH GOD ITS FREEZING UP HERE");
+                this.coordinates =new Coordinates(coordinates.getLongitude() + 10, coordinates.getLatitude() + 2, coordinates.getHeight() - 12);
                 System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
                 break;
             default:

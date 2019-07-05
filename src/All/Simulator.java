@@ -36,7 +36,7 @@ public class Simulator {
                 System.out.println("No file found" + args[0]);
             }
             catch (IOException e) {
-                System.out.println("Errror in reading the file" + args[0]);
+                System.out.println("Error in reading the file" + args[0]);
             }
             catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("What's your simulation file?");
