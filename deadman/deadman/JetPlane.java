@@ -1,4 +1,4 @@
-package All;
+package deadman;
 
 public class JetPlane extends Aircraft implements Flyable {
 
@@ -30,24 +30,24 @@ public class JetPlane extends Aircraft implements Flyable {
 				break;
 			case "SNOW":
 				this.coordinates.setHeight(this.coordinates.getHeight() - 12);
-				//Simulator.writer.println("All.JetPlane#" + this.name + "(" + this.id + "): THE SNOW IS FREEZING MY WINDOWS THEY ARE GOING TO CRACK");
+				//Simulator.writer.println("deadman.JetPlane#" + this.name + "(" + this.id + "): THE SNOW IS FREEZING MY WINDOWS THEY ARE GOING TO CRACK");
 				System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
 				break;
 			default:
-			//Simulator.writer.println("All.JetPlane#" + this.name + "(" + this.id + "): ALL HOPE IS LOST I CAN't COUNTACT THE WEATHER TOWER");
+			//Simulator.writer.println("deadman.JetPlane#" + this.name + "(" + this.id + "): ALL HOPE IS LOST I CAN't COUNTACT THE WEATHER TOWER");
 				System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
 			break;
 		}
 		if (this.coordinates.getHeight() <= 0) {
-//			Simulator.writer.println("All.JetPlane#" + this.name + "(" + this.id + ") landing.");
-//			Simulator.writer.println("All.Tower  says: All.JetPlane#" + this.name + "(" + this.id + ")" + " unregistered from weather tower.");
+//			Simulator.writer.println("deadman.JetPlane#" + this.name + "(" + this.id + ") landing.");
+//			Simulator.writer.println("All.Tower  says: deadman.JetPlane#" + this.name + "(" + this.id + ")" + " unregistered from weather tower.");
 			System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
 		}
 	}
 
 	public	void	registerTower(WeatherTower weatherTower) {
 		this.weatherTower = weatherTower;
-		//Simulator.writer.println("All.Tower says: All.JetPlane#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
+		//Simulator.writer.println("All.Tower says: deadman.JetPlane#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
 		System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
 		this.weatherTower.register(this);
 	}

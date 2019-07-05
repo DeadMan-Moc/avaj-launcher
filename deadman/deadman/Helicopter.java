@@ -1,4 +1,4 @@
-package All;
+package deadman;
 
 public class Helicopter extends Aircraft implements Flyable {
 
@@ -50,16 +50,16 @@ public class Helicopter extends Aircraft implements Flyable {
         }
 
 //        public	void	registerTower(WeatherTower weatherTower) {
-//            //Simulator.writer.println("All.Tower says: All.JetPlane#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
+//            //Simulator.writer.println("All.Tower says: deadman.JetPlane#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
 //            System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
 //            this.weatherTower.register(this);
 //        }
     }
 
-    @Override
-    public void registerTower(WeatherTower WeatherTower) {
+    //@Override
+    public void registerTower(WeatherTower weatherTower) {
         System.out.println("All.Baloon#" + this.name + "(" + this.id + "): GOOD THING I BROUGHT MY SUNGLASSES");
-        this.weatherTower.register(this);
+        weatherTower.register(this);
     }
 }
 		

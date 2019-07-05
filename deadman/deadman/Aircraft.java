@@ -1,7 +1,7 @@
-package All;
+package deadman;
 
 public abstract class Aircraft {
-    
+
     protected long id;
     protected String name;
     protected Coordinates coordinates;
@@ -10,11 +10,12 @@ public abstract class Aircraft {
     protected Aircraft(String name, Coordinates coordinates) {
         this.name = name;
         this.coordinates = coordinates;
-     
+
         this.id = idCounter;
         idCounter = ++idCounter;
     }
-    private long nextId(){
+
+    private long nextId() {
         id = ++idCounter;
         return (id);
     }

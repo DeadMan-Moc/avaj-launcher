@@ -1,4 +1,4 @@
-package All;
+package deadman;
 
 public interface Flyable  {
     public Coordinates getCoordinates();

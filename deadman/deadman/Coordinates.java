@@ -1,4 +1,4 @@
-package All;
+package deadman;
 
 public class Coordinates {
     private int longitude;
